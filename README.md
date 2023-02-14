@@ -26,5 +26,13 @@ We investigate transferability to seven medical target datasets:
 
 #### Usage
 
-Place your datasets 
+Specific paths to the different datasets are to be set in io_fun/data_paths.py. Data is split to folds in make_dataframe.py. To fine-tune pre-trained RadImageNet weights on eg. Chest X-rays run:
+
+```shell script
+python src/fine-tuning.py --base RadImageNet --t chest --image_h 112 --image_w 112 --freeze True --e 200 --k 5 --batch 128 --l 0.00001
+```
+
+
+### Model similarity
+
 
