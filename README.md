@@ -11,6 +11,8 @@ This project consists of two parts:
 * Fine-tuning natural and medical image sources on medical image classification targets, and
 * Experiments on model similarity.
 
+<img src="method.png" alt="method overview">
+
 ### Fine-tuning
 
 We use publicly available pre-trained ImageNet (Keras implementation of ResNet50) and RadImageNet (https://drive.google.com/drive/folders/1Es7cK1hv7zNHJoUW0tI0e6nLFVYTqPqK?usp=sharing) weights as source tasks in our transfer learning experiments.
