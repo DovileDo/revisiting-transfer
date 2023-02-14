@@ -26,13 +26,16 @@ We investigate transferability to seven medical target datasets:
 
 #### Usage
 
+Our fine-tuning experiments and models were logged on a private server using [MLflow](https://www.mlflow.org/). Update looging in fine-tuning.py.
+
 Specific paths to the different datasets are to be set in io_fun/data_paths.py. Data is split to folds in make_dataframe.py. To fine-tune pre-trained RadImageNet weights on eg. Chest X-rays run:
 
 ```shell script
-python src/fine-tuning.py --base RadImageNet --t chest --image_h 112 --image_w 112 --freeze True --e 200 --k 5 --batch 128 --l 0.00001
+python src/fine-tuning.py --base RadImageNet --t chest --image_h 112 --image_w 112 --freeze False --e 200 --k 1 --batch 128 --l 0.00001
 ```
-
+To first freeze the pre-trained weights and then fine-tune after training the classification layer set --freeze to True. 
 
 ### Model similarity
 
-
+Model similarity is assesed by comparing the network activations over a sample of images from the target datasets using two similarity measures, Canonical
+Correlation Analysis (CCA) and prediction similarity. We use publibly available [CCA implamentation](https://github.com/google/svcca) which should be placed at the same level locally as src/. Model similarity can be evaluated using CCA.py and prediction_similarity.py after placing fine-tuned models locally in a directory next to src/. Figures in the paper can be reproduced using CCA_plot.py, filter_plot.py, similarity_plot.py, and simVSauc_plot.py.
