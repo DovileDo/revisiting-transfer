@@ -24,7 +24,7 @@ We investigate transferability to seven medical target datasets:
 6. [Breast ultrasound](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset)
 7. [ACL and meniscus tear detection](https://stanfordmlgroup.github.io/competitions/mrnet/)
 
-### Usage
+#### Usage
 
 Place your datasets 
 
