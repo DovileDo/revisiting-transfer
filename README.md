@@ -19,13 +19,13 @@ We use publicly available pre-trained ImageNet (Keras implementation of ResNet50
 
 We investigate transferability to seven medical target datasets:
 <ol type="a">
- <li>[Chest X-rays](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)</li>
-b. [Breast ultrasound](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset)
-c. [Thyroid ultrasound](https://www.kaggle.com/datasets/dasmehdixtr/ddti-thyroid-ultrasound-images)
-d. [Curated Breast Imaging Subset of Digital Database for Screening Mammography (CBIS-DDSM)](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=22516629)
-e. [ACL and meniscus tear detection](https://stanfordmlgroup.github.io/competitions/mrnet/)
-f. [PatchCamelyon](http://basveeling.nl/posts/pcam/)
-g. [ISIC2018 - Task 3 - the training set](https://challenge2018.isic-archive.com/task3/training/)
+<li>[Chest X-rays](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)</li>
+<li>[Breast ultrasound](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset)</li>
+<li>[Thyroid ultrasound](https://www.kaggle.com/datasets/dasmehdixtr/ddti-thyroid-ultrasound-images)</li>
+<li>[Curated Breast Imaging Subset of Digital Database for Screening Mammography (CBIS-DDSM)](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=22516629)</li>
+<li>[ACL and meniscus tear detection](https://stanfordmlgroup.github.io/competitions/mrnet/)</li>
+<li>[PatchCamelyon](http://basveeling.nl/posts/pcam/)</li>
+<li>[ISIC2018 - Task 3 - the training set](https://challenge2018.isic-archive.com/task3/training/)</li>
 </ol>
 
 A representative image from each dataset can be seen here:
