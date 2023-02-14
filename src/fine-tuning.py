@@ -1,12 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-
 import argparse
-
-parser = argparse.ArgumentParser()
-
-
 parser = argparse.ArgumentParser()
 parser.add_argument("--base", type=str, help="choose RadImageNet or ImageNet")
 parser.add_argument(
@@ -25,7 +20,6 @@ parser.add_argument("--image_width", type=int, help="image width")
 parser.add_argument("--epoch", type=int, help="number of epochs", default=200)
 parser.add_argument("--lr", type=float, help="learning rate", default=0.00001)
 args = parser.parse_args()
-
 
 import numpy as np
 import pandas as pd
