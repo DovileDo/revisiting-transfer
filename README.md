@@ -18,13 +18,15 @@ This project consists of two parts:
 We use publicly available pre-trained ImageNet (Keras implementation of ResNet50) and RadImageNet (https://drive.google.com/drive/folders/1Es7cK1hv7zNHJoUW0tI0e6nLFVYTqPqK?usp=sharing) weights as source tasks in our transfer learning experiments.
 
 We investigate transferability to seven medical target datasets:
-a. [Chest X-rays](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)
+<ol type="a">
+ <li>[Chest X-rays](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)</li>
 b. [Breast ultrasound](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset)
 c. [Thyroid ultrasound](https://www.kaggle.com/datasets/dasmehdixtr/ddti-thyroid-ultrasound-images)
 d. [Curated Breast Imaging Subset of Digital Database for Screening Mammography (CBIS-DDSM)](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=22516629)
 e. [ACL and meniscus tear detection](https://stanfordmlgroup.github.io/competitions/mrnet/)
 f. [PatchCamelyon](http://basveeling.nl/posts/pcam/)
 g. [ISIC2018 - Task 3 - the training set](https://challenge2018.isic-archive.com/task3/training/)
+</ol>
 
 A representative image from each dataset can be seen here:
 <img src="data/datasets.png" alt="data">
