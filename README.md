@@ -44,4 +44,4 @@ Correlation Analysis (CCA) and prediction similarity. We use publibly available 
 
 ### Prerequisites
 
-he packages needed to run the fine-tuning experiments are listed in the conda.yaml file.
+The packages needed to run the fine-tuning experiments are listed in the conda.yaml file.
