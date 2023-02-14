@@ -18,19 +18,22 @@ This project consists of two parts:
 We use publicly available pre-trained ImageNet (Keras implementation of ResNet50) and RadImageNet (https://drive.google.com/drive/folders/1Es7cK1hv7zNHJoUW0tI0e6nLFVYTqPqK?usp=sharing) weights as source tasks in our transfer learning experiments.
 
 We investigate transferability to seven medical target datasets:
-1. [Chest X-rays](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)
-2. [PatchCamelyon](http://basveeling.nl/posts/pcam/)
-3. [Curated Breast Imaging Subset of Digital Database for Screening Mammography (CBIS-DDSM)](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=22516629)
-4. [ISIC2018 - Task 3 - the training set](https://challenge2018.isic-archive.com/task3/training/)
-5. [Thyroid ultrasound](https://www.kaggle.com/datasets/dasmehdixtr/ddti-thyroid-ultrasound-images)
-6. [Breast ultrasound](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset)
-7. [ACL and meniscus tear detection](https://stanfordmlgroup.github.io/competitions/mrnet/)
+a. [Chest X-rays](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)
+b. [Breast ultrasound](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset)
+c. [Thyroid ultrasound](https://www.kaggle.com/datasets/dasmehdixtr/ddti-thyroid-ultrasound-images)
+d. [Curated Breast Imaging Subset of Digital Database for Screening Mammography (CBIS-DDSM)](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=22516629)
+e. [ACL and meniscus tear detection](https://stanfordmlgroup.github.io/competitions/mrnet/)
+f. [PatchCamelyon](http://basveeling.nl/posts/pcam/)
+g. [ISIC2018 - Task 3 - the training set](https://challenge2018.isic-archive.com/task3/training/)
+
+A representative image from each dataset can be seen here:
+<img src="data/datasets.PNG" alt="data">
 
 #### Usage
 
-Our fine-tuning experiments and models were logged on a private server using [MLflow](https://www.mlflow.org/). Update looging in fine-tuning.py.
+Our fine-tuning experiments and models were logged on a private server using [MLflow](https://www.mlflow.org/). Update looging in `fine-tuning.py`.
 
-Specific paths to the different datasets are to be set in io_fun/data_paths.py. Data is split to folds in make_dataframe.py. To fine-tune pre-trained RadImageNet weights on eg. Chest X-rays run:
+Specific paths to the different datasets are to be set in `io_fun/data_paths.py`. Data is split to folds in `make_dataframe.py`. To fine-tune pre-trained RadImageNet weights on eg. Chest X-rays run:
 
 ```shell script
 python src/fine-tuning.py --base RadImageNet --t chest --image_h 112 --image_w 112 --freeze False --e 200 --k 1 --batch 128 --l 0.00001
@@ -40,8 +43,8 @@ To first freeze the pre-trained weights and then fine-tune after training the cl
 ### 2. Model similarity
 
 Model similarity is assesed by comparing the network activations over a sample of images from the target datasets using two similarity measures, Canonical
-Correlation Analysis (CCA) and prediction similarity. We use publibly available [CCA implementation](https://github.com/google/svcca) which should be placed at the same level locally as src/. Model similarity can be evaluated using CCA.py and prediction_similarity.py after placing fine-tuned models locally in a directory next to src/. Figures in the paper can be reproduced using CCA_plot.py, filter_plot.py, similarity_plot.py, and simVSauc_plot.py.
+Correlation Analysis (CCA) and prediction similarity. We use publibly available [CCA implementation](https://github.com/google/svcca) which should be placed at the same level locally as `src/`. Model similarity can be evaluated `using CCA.py` and `prediction_similarity.py` after placing fine-tuned models locally in a directory next to `src/`. Figures in the paper can be reproduced using `CCA_plot.py`, `filter_plot.py`, `similarity_plot.py`, and `simVSauc_plot.py`.
 
 ### Prerequisites
 
-The packages needed to run the fine-tuning experiments are listed in the conda.yaml file.
+The packages needed to run the fine-tuning experiments are listed in the `conda.yaml` file.
