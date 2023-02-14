@@ -27,7 +27,7 @@ f. [PatchCamelyon](http://basveeling.nl/posts/pcam/)
 g. [ISIC2018 - Task 3 - the training set](https://challenge2018.isic-archive.com/task3/training/)
 
 A representative image from each dataset can be seen here:
-<img src="data/datasets.PNG" alt="data">
+<img src="data/datasets.png" alt="data">
 
 #### Usage
 
