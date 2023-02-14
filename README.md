@@ -41,11 +41,6 @@ python src/fine-tuning.py --base RadImageNet --t chest --image_h 112 --image_w 1
 ```
 To first freeze the pre-trained weights and then fine-tune after training the classification layer set --freeze to True. 
 
-<details>
-           <summary> ### Model similarity ### </summary>
-           <p>Model similarity is assesed by comparing the network activations over a sample of images from the target datasets using two similarity measures, Canonical Correlation Analysis (CCA) and prediction similarity. We use publibly available [CCA implementation](https://github.com/google/svcca) which should be placed at the same level locally as `src/`. Model similarity can be evaluated `using CCA.py` and `prediction_similarity.py` after placing fine-tuned models locally in a directory next to `src/`. Figures in the paper can be reproduced using `CCA_plot.py`, `filter_plot.py`, `similarity_plot.py`, and `simVSauc_plot.py`.</p>
-</details>
-
 ### 2. Model similarity
 
 Model similarity is assesed by comparing the network activations over a sample of images from the target datasets using two similarity measures, Canonical Correlation Analysis (CCA) and prediction similarity. We use publibly available [CCA implementation](https://github.com/google/svcca) which should be placed at the same level locally as `src/`. Model similarity can be evaluated `using CCA.py` and `prediction_similarity.py` after placing fine-tuned models locally in a directory next to `src/`. Figures in the paper can be reproduced using `CCA_plot.py`, `filter_plot.py`, `similarity_plot.py`, and `simVSauc_plot.py`.
