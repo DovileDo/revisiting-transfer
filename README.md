@@ -11,7 +11,7 @@ This project consists of two parts:
 * Fine-tuning natural and medical image sources on medical image classification targets, and
 * Experiments on model similarity.
 
-<img src="method.pdf" alt="method overview">
+<img src="./method.pdf" alt="method overview">
 
 ### Fine-tuning
 
