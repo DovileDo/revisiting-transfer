@@ -32,7 +32,7 @@ A representative image from each dataset can be seen here:
 
 #### Usage
 
-Our fine-tuning experiments and models were logged on a private server using [MLflow](https://www.mlflow.org/). Update looging in `fine-tuning.py`.
+Our fine-tuning experiments and models were logged on a private server using [MLflow](https://www.mlflow.org/). Update logging in `fine-tuning.py`.
 
 Specific paths to the different datasets are to be set in `io_fun/data_paths.py`. Data is split to folds in `make_dataframe.py`. To fine-tune pre-trained RadImageNet weights on eg. Chest X-rays run:
 
