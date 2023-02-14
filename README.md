@@ -13,7 +13,7 @@ This project consists of two parts:
 
 <img src="method.PNG" alt="method overview">
 
-### Fine-tuning
+### 1. Fine-tuning
 
 We use publicly available pre-trained ImageNet (Keras implementation of ResNet50) and RadImageNet (https://drive.google.com/drive/folders/1Es7cK1hv7zNHJoUW0tI0e6nLFVYTqPqK?usp=sharing) weights as source tasks in our transfer learning experiments.
 
@@ -37,7 +37,7 @@ python src/fine-tuning.py --base RadImageNet --t chest --image_h 112 --image_w 1
 ```
 To first freeze the pre-trained weights and then fine-tune after training the classification layer set --freeze to True. 
 
-### Model similarity
+### 2. Model similarity
 
 Model similarity is assesed by comparing the network activations over a sample of images from the target datasets using two similarity measures, Canonical
 Correlation Analysis (CCA) and prediction similarity. We use publibly available [CCA implamentation](https://github.com/google/svcca) which should be placed at the same level locally as src/. Model similarity can be evaluated using CCA.py and prediction_similarity.py after placing fine-tuned models locally in a directory next to src/. Figures in the paper can be reproduced using CCA_plot.py, filter_plot.py, similarity_plot.py, and simVSauc_plot.py.
