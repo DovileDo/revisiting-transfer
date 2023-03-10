@@ -1,6 +1,6 @@
 # Revisiting Hidden Representations in Transfer Learning for Medical Imaging
 
-This repository contains the code and results included in the [paper](https://arxiv.org/abs/2302.08272)
+This repository contains the code and results included in the paper.
 
 Transfer learning has become an increasingly popular approach in medical imaging, as it offers a solution to the challenge of training models with limited dataset sizes. Despite its widespread use, the precise effects of transfer learning on medical image classification are still heavily understudied. We set out to investigate this with a series of systematic experiments on the difference of representations learned from natural (ImageNet) and medical (RadImageNet) source datasets on a range of (seven) medical targets.
 
